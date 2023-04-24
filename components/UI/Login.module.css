@@ -1,0 +1,89 @@
+.modal {
+  padding: 7rem;
+  max-width: 42rem;
+  margin: 10rem auto 0 auto;
+  background-color: rgba(1, 1, 1, 0.1);
+  border-radius: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 2rem;
+}
+.form input {
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1.2rem 0 1.2rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.form input:focus {
+  outline: none;
+}
+.form input::placeholder {
+  font-size: 1.4rem;
+}
+.button {
+  font-size: 2.2rem;
+  display: inline-block;
+  padding: 1rem 0;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.6rem;
+  transition: all 0.2s;
+}
+.button:hover {
+  color: #eee;
+  background-color: #ed535b;
+}
+.text {
+  font-size: 4.2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #bbb;
+}
+.check label {
+  font-size: 1.4rem;
+}
+.link:link,
+.link:visited {
+  font-size: 1.4rem;
+  color: #bbb;
+}
+
+.sign {
+  font-size: 1.6rem;
+  color: #bbb;
+  margin: 2rem 0 5rem 0;
+}
+
+.color {
+  color: #fff;
+  font-weight: 500;
+}
+
+.error {
+  margin-top: -1rem;
+  font-size: 1.4rem;
+  color: #e87c03;
+}
+.invalid {
+  margin-top: -1rem;
+  font-size: 1.4rem;
+  color: #e50914;
+}

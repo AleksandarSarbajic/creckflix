@@ -1,0 +1,72 @@
+.box {
+  position: relative;
+}
+.search {
+  width: 3rem;
+  height: 3rem;
+}
+.form {
+  display: inline-block;
+  /* width: 0rem; */
+  z-index: -1;
+}
+.input {
+  display: inline-block;
+  background-color: #111;
+  font-size: 1.4rem;
+  width: 0rem;
+  opacity: 0;
+  border-radius: 5px;
+  border: none;
+  /* padding: 1.3rem 1.5rem 1.3rem 5rem; */
+  z-index: -2;
+}
+.input::placeholder {
+  font-size: 1.4rem;
+}
+.button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.input:focus {
+  padding: 1.3rem 1.5rem 1.3rem 4rem;
+  width: 30rem;
+  opacity: 1;
+}
+
+.focus {
+  transform-origin: right;
+  animation-duration: 0.5s;
+  animation-name: showUp;
+}
+@keyframes showUp {
+  from {
+    opacity: 0;
+    width: 1rem;
+  }
+  to {
+    opacity: 1;
+    width: 30rem;
+  }
+}
+.icon {
+  /* width: 3rem;
+  height: 3rem; */
+  font-size: 3.3rem;
+  z-index: 2;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.remove {
+  font-size: 3rem;
+  z-index: 2;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  rotate: 45deg;
+}
