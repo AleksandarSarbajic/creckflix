@@ -14,7 +14,7 @@ export default function Home() {
         <meta name="creckflix" content="movies website"></meta>
       </Head>
 
-      <header>
+      <header style={{ background: "rgba(0, 8, 29, 1)" }}>
         <Hero></Hero>
         <Outline />
         <ShowGuide />

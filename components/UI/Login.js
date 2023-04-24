@@ -22,6 +22,7 @@ function LoginForm(props) {
       email: emailRef.current.value,
       password: passwordRef.current.value,
       stayLogin: checkRef.current.checked,
+      likedMovies: [],
     };
     props.onLogin(user);
   }

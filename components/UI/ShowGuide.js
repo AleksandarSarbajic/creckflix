@@ -3,9 +3,9 @@ import mobile from "../../public/img/mobile.png";
 import monitor from "../../public/img/monitor.png";
 import Outline from "../layout/Outline";
 import classes from "../UI/ShowGuide.module.css";
-function ShowGuide(props) {
+function ShowGuide() {
   return (
-    <>
+    <div className={classes.color}>
       <div className={`${classes.container} ${classes["grid-1"]}`}>
         <Image
           src={mobile}
@@ -34,8 +34,7 @@ function ShowGuide(props) {
           alt="our application on phone"
         />
       </div>
-      <Outline />
-    </>
+    </div>
   );
 }
 export default ShowGuide;

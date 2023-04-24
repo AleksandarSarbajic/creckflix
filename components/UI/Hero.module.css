@@ -1,9 +1,9 @@
 .hero {
   max-width: 100rem;
-  margin: 18rem auto 15rem auto;
+  margin: 0 auto 15rem auto;
   display: flex;
   flex-direction: column;
-
+  padding-top: 18rem;
   align-items: center;
   gap: 3rem;
 }
@@ -32,4 +32,15 @@
   margin-left: -0.8rem;
   width: 3rem;
   height: 3rem;
+}
+@media only screen and (max-width: 50em) {
+  .header {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 26.25em) {
+  .textSecond {
+    text-align: center;
+  }
 }

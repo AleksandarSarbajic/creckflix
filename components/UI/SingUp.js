@@ -22,6 +22,8 @@ function LoginForm(props) {
       name: nameRef.current.value,
       email: emailRef.current.value,
       password: passwordRef.current.value,
+      stayLogin: false,
+      likedMovies: [],
     };
 
     props.createUser(user);

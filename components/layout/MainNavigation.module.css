@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: space-between;
 
-  margin: 1.6rem auto 0 auto;
+  margin: 0 auto;
+  padding: 1.6rem 3rem 0 3rem;
 }
 
 .img {
