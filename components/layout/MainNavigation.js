@@ -17,10 +17,8 @@ export default function MainNavigation() {
   let login;
   let id;
   if (typeof window !== "undefined") {
-    // 👉️ can use localStorage here
     id = localStorage.getItem("token");
   } else {
-    // 👉️ can't use localStorage
   }
   if (route.pathname === "/") {
     login = (
@@ -30,7 +28,11 @@ export default function MainNavigation() {
         </Link>
       </li>
     );
-  } else if (route.pathname !== "/") {
+  } else if (
+    route.pathname !== "/" &&
+    route.pathname !== "/login" &&
+    route.pathname !== "/sign-up"
+  ) {
     login = (
       <>
         <li>
@@ -39,14 +41,24 @@ export default function MainNavigation() {
       </>
     );
   }
-  console.log(route.pathname);
+
   return (
     <header className={`${classes.header} ${inter.className}`}>
       <div className={classes.logo}>
-        <Link href={route.pathname !== "/" ? "/browse" : "/"}>
+        <Link
+          href={
+            route.pathname !== "/" &&
+            route.pathname !== "/login" &&
+            route.pathname !== "/sign-up"
+              ? "/browse"
+              : "/"
+          }
+        >
           <Image src={logo} alt="Logo" priority className={classes.img} />
         </Link>
-        {route.pathname !== "/" ? (
+        {route.pathname !== "/" &&
+        route.pathname !== "/login" &&
+        route.pathname !== "/sign-up" ? (
           <div className={classes.links}>
             <Link href={`/browse`} className={classes.browse}>
               Home
