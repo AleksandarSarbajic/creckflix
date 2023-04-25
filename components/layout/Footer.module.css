@@ -1,5 +1,6 @@
 .footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
   justify-content: center;
   gap: 10rem;
   align-items: center;
@@ -36,4 +37,10 @@
 .icon {
   color: #fff;
   font-size: 2.4rem;
+}
+@media only screen and (max-width: 44em) {
+  .footer {
+    gap: 3rem 5rem;
+    margin-bottom: 5rem;
+  }
 }

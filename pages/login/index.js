@@ -38,10 +38,6 @@ function LoginPage() {
       setErrorMsg("Invalid email/password input!");
     }
   }
-  return (
-    <>
-      <LoginForm onLogin={onLoginUser} error={errorMsg} />
-    </>
-  );
+  return <LoginForm onLogin={onLoginUser} error={errorMsg} />;
 }
 export default LoginPage;

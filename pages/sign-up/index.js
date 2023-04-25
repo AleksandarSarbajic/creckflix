@@ -23,11 +23,7 @@ function SignUp(props) {
     setExist(false);
     router.push("/");
   }
-  return (
-    <>
-      <SingUp createUser={createUserHandler} exists={exist} />
-    </>
-  );
+  return <SingUp createUser={createUserHandler} exists={exist} />;
 }
 
 export default SignUp;
