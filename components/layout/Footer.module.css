@@ -6,7 +6,7 @@
   align-items: center;
   margin-top: 10rem;
   padding-top: 5rem;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-top: 2px solid grey;
 }
 .item {
@@ -41,6 +41,6 @@
 @media only screen and (max-width: 44em) {
   .footer {
     gap: 3rem 5rem;
-    margin-bottom: 5rem;
+    padding: 5rem 0;
   }
 }
