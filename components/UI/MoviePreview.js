@@ -4,7 +4,6 @@ import { FaPlay } from "react-icons/fa";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { useEffect, useState } from "react";
 function MoviePreview({ movie }) {
-  console.log(movie);
   const [description, setDescription] = useState(
     "At top-secret U.S.-Australian joint defense facility Pine Gap, fissuresappear in the critical alliance as spies work with, and against, eachother."
   );

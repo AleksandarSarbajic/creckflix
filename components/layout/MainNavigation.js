@@ -4,8 +4,9 @@ import logo from "public/img/logo.png";
 import classes from "components/layout/MainNavigation.module.css";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
-
+import { useEffect, useCallback, useState } from "react";
 import Search from "./Search";
+import { IoIosMenu } from "react-icons/io";
 const inter = Inter({
   weight: ["500", "400", "600", "700"],
   subsets: ["latin"],
@@ -13,7 +14,34 @@ const inter = Inter({
 
 export default function MainNavigation() {
   const route = useRouter();
-  // console.log(route);
+
+  const [navClass, setNavClass] = useState("");
+  const [showSideBar, setShowSideBar] = useState("");
+  const [scrollY, setScrollY] = useState(0);
+  const onScroll = useCallback(
+    (event) => {
+      const { pageYOffset } = window;
+
+      setScrollY(pageYOffset);
+
+      if (pageYOffset >= 150 && pageYOffset <= 300) {
+        setNavClass(classes.bg);
+      } else if (pageYOffset <= 150) {
+        setNavClass(classes.relative);
+      }
+    },
+    [classes.translate, showSideBar]
+  );
+
+  useEffect(() => {
+    //add eventlistener to window
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // remove event on unmount to prevent a memory leak with the cleanup
+    return () => {
+      window.removeEventListener("scroll", onScroll, { passive: true });
+    };
+  }, []);
+
   let login;
   let id;
   if (typeof window !== "undefined") {
@@ -34,53 +62,72 @@ export default function MainNavigation() {
     route.pathname !== "/sign-up"
   ) {
     login = (
-      <>
-        <li>
-          <Search />
-        </li>
-      </>
+      <li>
+        <Search />
+      </li>
     );
+  }
+  function showHiddenSideBar() {
+    if (showSideBar === classes.translate) {
+      setShowSideBar("");
+      if (scrollY >= 300) {
+      } else {
+        setNavClass(classes.relative);
+      }
+    } else {
+      setShowSideBar(classes.translate);
+      setNavClass(classes.bg);
+    }
   }
 
   return (
-    <header className={`${classes.header} ${inter.className}`}>
-      <div className={classes.logo}>
-        <Link
-          href={
-            route.pathname !== "/" &&
-            route.pathname !== "/login" &&
-            route.pathname !== "/sign-up"
-              ? "/browse"
-              : "/"
-          }
-        >
-          <Image src={logo} alt="Logo" priority className={classes.img} />
-        </Link>
-        {route.pathname !== "/" &&
-        route.pathname !== "/login" &&
-        route.pathname !== "/sign-up" ? (
-          <div className={classes.links}>
-            <Link href={`/browse`} className={classes.browse}>
-              Home
-            </Link>
-            <Link href={"/"} className={classes.browse}>
-              TV Shows
-            </Link>
-            <Link href={"/movies"} className={classes.browse}>
-              Movies
-            </Link>
-            <Link href={`/browse/mylist:${id}`} className={classes.browse}>
-              My list
-            </Link>
-            <Link href={"/"} className={classes.browse}>
-              New & Popular
-            </Link>
-          </div>
-        ) : null}
-      </div>
-      <nav>
-        <ul>{login}</ul>
+    <div className={classes.main}>
+      <nav
+        className={`${classes.header} ${inter.className} ${navClass} ${
+          showSideBar === classes.translate ? classes.bg : ""
+        }`}
+      >
+        <div className={classes.logo}>
+          <button className={classes.button} onClick={showHiddenSideBar}>
+            <IoIosMenu className={classes.icon} />
+          </button>
+          <Link
+            href={
+              route.pathname !== "/" &&
+              route.pathname !== "/login" &&
+              route.pathname !== "/sign-up"
+                ? "/browse"
+                : "/"
+            }
+          >
+            <Image src={logo} alt="Logo" priority className={classes.img} />
+          </Link>
+          {route.pathname !== "/" &&
+          route.pathname !== "/login" &&
+          route.pathname !== "/sign-up" ? (
+            <div className={`${classes.links} ${showSideBar}`}>
+              <Link href={`/browse`} className={classes.browse}>
+                Home
+              </Link>
+              <Link href={"/"} className={classes.browse}>
+                TV Shows
+              </Link>
+              <Link href={"/movies"} className={classes.browse}>
+                Movies
+              </Link>
+              <Link href={`/browse/mylist:${id}`} className={classes.browse}>
+                My list
+              </Link>
+              <Link href={"/"} className={classes.browse}>
+                New & Popular
+              </Link>
+            </div>
+          ) : null}
+        </div>
+        <div>
+          <ul>{login}</ul>
+        </div>
       </nav>
-    </header>
+    </div>
   );
 }
