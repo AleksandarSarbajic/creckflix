@@ -25,11 +25,12 @@ function UserLoggedIn(props) {
   }
 
   const filteredUser = props.users.filter((item) => item._id === id);
-  // useEffect(() => {
-  //   if (filteredUser.length === 0) {
-  //     router.push("/login");
-  //   }
-  // }, [filteredUser]);
+  useEffect(() => {
+    if (filteredUser.length === 0) {
+      console.log("desilo se");
+      router.push("/login");
+    }
+  }, [filteredUser]);
   let movie = [];
   let filteredMovies = [];
   if (!router.query.detail) {
