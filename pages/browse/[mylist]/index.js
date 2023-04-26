@@ -81,7 +81,7 @@ export default function MyList(props) {
 //     fallback: "blocking",
 //     paths: users.map((user) => ({
 //       params: { mylist: user._id.toString() },
-//     })),
+//     }))
 //   };
 // }
 
