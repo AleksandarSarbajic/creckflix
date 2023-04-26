@@ -67,23 +67,23 @@ export default function MyList(props) {
   );
 }
 
-export async function getStaticPaths() {
-  const client = await MongoClient.connect(
-    "mongodb+srv://sleasarbajic:FIEzTsepUaCSR79i@creck.ougdyzb.mongodb.net/users?retryWrites=true&w=majority"
-  );
-  const db = client.db();
+// export async function getStaticPaths() {
+//   const client = await MongoClient.connect(
+//     "mongodb+srv://sleasarbajic:FIEzTsepUaCSR79i@creck.ougdyzb.mongodb.net/users?retryWrites=true&w=majority"
+//   );
+//   const db = client.db();
 
-  const userCollection = db.collection("users");
+//   const userCollection = db.collection("users");
 
-  const users = await userCollection.find().toArray();
-  client.close();
-  return {
-    fallback: "blocking",
-    paths: users.map((user) => ({
-      params: { mylist: user._id.toString() },
-    })),
-  };
-}
+//   const users = await userCollection.find().toArray();
+//   client.close();
+//   return {
+//     fallback: "blocking",
+//     paths: users.map((user) => ({
+//       params: { mylist: user._id.toString() },
+//     })),
+//   };
+// }
 
 export async function getServerSideProps() {
   const client = await MongoClient.connect(
