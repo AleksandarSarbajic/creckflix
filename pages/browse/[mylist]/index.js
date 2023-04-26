@@ -85,7 +85,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const client = await MongoClient.connect(
     "mongodb+srv://sleasarbajic:FIEzTsepUaCSR79i@creck.ougdyzb.mongodb.net/users?retryWrites=true&w=majority"
   );
