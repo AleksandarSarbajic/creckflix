@@ -37,11 +37,11 @@ export default function MovieItemList(props) {
       items: 3,
     },
     bigmobile: {
-      breakpoint: { max: 650, min: 500 },
+      breakpoint: { max: 650, min: 432 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 500, min: 0 },
+      breakpoint: { max: 432, min: 0 },
       items: 1,
     },
   };

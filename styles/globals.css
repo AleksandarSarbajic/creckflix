@@ -95,6 +95,25 @@ a {
 }
 @media only screen and (max-width: 31.25em) {
   .carousel {
-    margin: 0 0rem 0 5rem;
+    margin-left: 1rem;
+  }
+  .trendin {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 27em) {
+  .carousel {
+    margin: 0 3rem 0 12rem;
+  }
+}
+@media only screen and (max-width: 24.5em) {
+  .carousel {
+    margin: 0 3rem 0 10rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .carousel {
+    margin: 0 3rem 0 8rem;
   }
 }
