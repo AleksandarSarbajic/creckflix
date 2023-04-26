@@ -41,7 +41,7 @@ a {
 }
 .carousel {
   height: 20rem;
-  margin: 0 5rem 0 5rem;
+  margin: 0 5rem;
 }
 .trending {
   font-size: 2.8rem;
@@ -68,6 +68,11 @@ a {
   margin: 25rem 0;
   font-size: 1.4rem;
 }
+@media only screen and (max-width: 87.5em) {
+  .carousel {
+    margin: 0 3rem;
+  }
+}
 @media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
@@ -76,5 +81,20 @@ a {
 @media only screen and (max-width: 62.5em) {
   html {
     font-size: 50%;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .carousel {
+    margin: 0 0 0 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .carousel {
+    margin: 0 1rem 0 3rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .carousel {
+    margin: 0 0rem 0 5rem;
   }
 }

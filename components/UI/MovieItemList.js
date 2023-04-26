@@ -24,16 +24,24 @@ export default function MovieItemList(props) {
       breakpoint: { max: 4000, min: 3000 },
       items: 6,
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+    largeDesktop: {
+      breakpoint: { max: 3000, min: 1600 },
       items: 5,
     },
+    desktop: {
+      breakpoint: { max: 1600, min: 900 },
+      items: 4,
+    },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 900, min: 650 },
+      items: 3,
+    },
+    bigmobile: {
+      breakpoint: { max: 650, min: 500 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 500, min: 0 },
       items: 1,
     },
   };
@@ -41,7 +49,12 @@ export default function MovieItemList(props) {
   return (
     <div style={{ margin: "-5rem 0 4rem 0" }}>
       <h2 className="trendin">{props.title}</h2>
-      <Carousel responsive={responsive} ssr={true} containerClass="carousel">
+      <Carousel
+        responsive={responsive}
+        ssr={true}
+        containerClass="carousel"
+        removeArrowOnDeviceType={["tablet", "bigmobile", "mobile"]}
+      >
         {props.movies.map((movie) => (
           <MovieItem
             id={movie.id}
