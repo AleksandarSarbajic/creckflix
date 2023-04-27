@@ -67,3 +67,44 @@
   width: 3rem;
   height: 3rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .bg {
+    padding: 0 2% 0 5%;
+  }
+  .header {
+    font-size: 8rem;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .text {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .text {
+    width: 70%;
+  }
+  .header {
+    font-size: 6.6rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .header {
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+    margin-top: 1rem;
+    width: 80%;
+  }
+  .bg {
+    padding: 0 1%;
+
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 27em) {
+  .header {
+    font-size: 6rem;
+  }
+}

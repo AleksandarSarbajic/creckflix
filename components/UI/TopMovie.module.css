@@ -169,3 +169,14 @@
   opacity: 1;
   visibility: visible;
 }
+
+@media only screen and (max-width: 56.25em) {
+  .hidden {
+    display: none;
+  }
+  .slider:hover .place,
+  .slider:hover .img {
+    opacity: 1;
+    visibility: visible;
+  }
+}

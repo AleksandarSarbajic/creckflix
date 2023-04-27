@@ -26,7 +26,7 @@ function MoviePreview({ movie }) {
       <h1 className={`${isVisible ? "" : "visible"} ${classes.header}`}>
         {movie.name}
       </h1>
-      <p className={classes.text}>{description}</p>
+      {isVisible && <p className={classes.text}>{description}</p>}
       <div className={classes.buttons}>
         <Link href={"/"} className={classes.play}>
           <FaPlay className={classes.icon} />
