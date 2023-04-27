@@ -82,15 +82,29 @@ a {
   html {
     font-size: 50%;
   }
+  .zindex {
+    padding: 10rem 3rem 10rem 2rem;
+  }
 }
 @media only screen and (max-width: 50em) {
   .carousel {
     margin: 0 0 0 3rem;
   }
+  .zindex {
+    padding: 10rem 0;
+  }
+}
+@media only screen and (max-width: 44em) {
+  .zindex {
+    padding: 10rem 3rem 10rem 1rem;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .carousel {
     margin: 0 1rem 0 3rem;
+  }
+  .zindex {
+    padding: 10rem 0;
   }
 }
 @media only screen and (max-width: 31.25em) {
@@ -101,10 +115,20 @@ a {
     margin: 0;
     text-align: center;
   }
+  .trending {
+    margin: 0 0 -10rem 0;
+    text-align: center;
+  }
+  .zindex {
+    padding: 10rem 1rem 10rem 2rem;
+  }
 }
 @media only screen and (max-width: 27em) {
   .carousel {
     margin: 0 3rem 0 12rem;
+  }
+  .zindex {
+    padding: 10rem 1rem 10rem 0;
   }
 }
 @media only screen and (max-width: 24.5em) {

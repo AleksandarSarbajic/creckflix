@@ -29,7 +29,9 @@ function TopMovie(props) {
     <div className={classes.top}>
       <div className={classes.slider}>
         <h1 className={classes.place}>{props.position}</h1>
-        <img src={props.image} className={classes.img} />
+        <Link href={`/browse/?detail=${props.id}`}>
+          <img src={props.image} className={classes.img} />
+        </Link>
       </div>
       <div className={classes.hidden}>
         <img
