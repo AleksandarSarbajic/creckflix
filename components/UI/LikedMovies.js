@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import { useRouter } from "next/router";
+
 import MovieItem from "./MovieItem";
 import classes from "../UI/LikedMovies.module.css";
 
@@ -10,7 +10,8 @@ export default function TopMoviesList(props) {
   const [movies, setMovies] = useState(props.movies);
   const [isLoading, setIsLoading] = useState(false);
   const filteredUser = props.user.filter((item) => item._id === props.id);
-  const likedMovies = props.user[0].likedMovies;
+  const likedMovies = filteredUser[0].likedMovies;
+
   let filteredMovies = movies.filter((movie) => likedMovies.includes(movie.id));
   useEffect(() => {
     setMovies(filteredMovies);

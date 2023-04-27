@@ -10,7 +10,10 @@ export default async function handler(req, res) {
 
     const userCollection = db.collection("users");
 
-    const accounts = await userCollection.find().toArray();
+    const accounts = await userCollection
+      .find({ _id: new ObjectId(_id) })
+      .toArray();
+
     const filteredMovies = accounts[0].likedMovies.filter(
       (item) => item !== movie
     );
@@ -33,7 +36,7 @@ export default async function handler(req, res) {
       .find({ _id: new ObjectId(_id) })
       .toArray();
 
+    res.status(201).json(accounts);
     client.close();
-    res.status(201).json({ message: "inserted" });
   }
 }
