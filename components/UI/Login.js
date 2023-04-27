@@ -50,7 +50,7 @@ function LoginForm(props) {
       <h2 className={classes.text}>Sign In</h2>
       <form onSubmit={submitHandler} className={classes.form}>
         <input
-          type="text"
+          type="email"
           placeholder="email@example.com"
           id="email"
           ref={emailRef}
