@@ -109,10 +109,66 @@
 }
 .exiticon {
   font-size: 4rem;
-  color: #181818;
+  color: #1f1f1f;
 }
 .button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 44em) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 30rem);
+    margin: 5rem 5rem 0 5rem;
+    gap: 3rem;
+    column-gap: 5rem;
+    justify-content: center;
+  }
+  .image {
+    max-width: 75rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .grid {
+    grid-template-columns: repeat(2, 25rem);
+    margin: 5rem 3rem 0 3rem;
+    gap: 3rem;
+    column-gap: 5rem;
+  }
+  .image {
+    max-width: 70rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .text {
+    margin: 5rem 1rem 0 1rem;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 35rem);
+    margin: 5rem 3rem 0 3rem;
+    gap: 3rem;
+    column-gap: 5rem;
+  }
+  .image {
+    max-width: 80rem;
+  }
+  .details {
+    margin-left: 2rem;
+  }
+  .trailers {
+    margin-left: 2rem;
+  }
+  .members {
+    text-align: center;
+  }
+  .overlay {
+    margin: -10rem 1rem 0 1rem;
+  }
+}
+@media only screen and (max-width: 27em) {
+  .cast {
+    width: 47.5rem;
+  }
 }
