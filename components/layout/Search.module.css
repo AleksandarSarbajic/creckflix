@@ -73,7 +73,6 @@
     padding: 1.3rem 1.5rem 1.3rem 1rem;
     width: 25rem;
     opacity: 1;
-    outline: 1px solid #fff;
     transform-origin: right;
     animation-duration: 0.5s;
     animation-name: showUp;
@@ -82,6 +81,7 @@
     padding: 1.3rem 1.5rem 1.3rem 1rem;
     width: 25rem;
     opacity: 1;
+    outline: 1px solid #fff;
   }
 
   .button {
