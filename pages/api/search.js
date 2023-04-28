@@ -8,9 +8,6 @@ async function handler(req, res) {
     );
     const collection = client.db().collection("movies");
 
-    // const userCollection = db.collection("movies");
-    // const fil = await db.find().toArray();
-
     client.close();
   }
 }

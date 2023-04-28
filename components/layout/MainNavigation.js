@@ -14,7 +14,7 @@ const inter = Inter({
 
 export default function MainNavigation() {
   const route = useRouter();
-
+  console.log(route.pathname);
   const [navClass, setNavClass] = useState("");
   const [showSideBar, setShowSideBar] = useState("");
   const [scrollY, setScrollY] = useState(0);
@@ -81,53 +81,82 @@ export default function MainNavigation() {
   }
 
   return (
-    <div className={classes.main}>
-      <nav
-        className={`${classes.header} ${inter.className} ${navClass} ${
-          showSideBar === classes.translate ? classes.bg : ""
-        }`}
-      >
-        <div className={classes.logo}>
-          <button className={classes.button} onClick={showHiddenSideBar}>
-            <IoIosMenu className={classes.icon} />
-          </button>
-          <Link
-            href={
-              route.pathname !== "/" &&
-              route.pathname !== "/login" &&
-              route.pathname !== "/sign-up"
-                ? "/browse"
-                : "/"
-            }
-          >
-            <Image src={logo} alt="Logo" priority className={classes.img} />
-          </Link>
-          {route.pathname !== "/" &&
-          route.pathname !== "/login" &&
-          route.pathname !== "/sign-up" ? (
-            <div className={`${classes.links} ${showSideBar}`}>
-              <Link href={`/browse`} className={classes.browse}>
-                Home
-              </Link>
-              <Link href={"/"} className={classes.browse}>
-                TV Shows
-              </Link>
-              <Link href={"/movies"} className={classes.browse}>
-                Movies
-              </Link>
-              <Link href={`/browse/mylist:${id}`} className={classes.browse}>
-                My list
-              </Link>
-              <Link href={"/"} className={classes.browse}>
-                New & Popular
-              </Link>
-            </div>
-          ) : null}
-        </div>
-        <div>
-          <ul>{login}</ul>
-        </div>
-      </nav>
-    </div>
+    <>
+      <div className={classes.main}>
+        <nav
+          className={`${classes.header} ${inter.className} ${navClass} ${
+            showSideBar === classes.translate ? classes.bg : ""
+          }`}
+        >
+          <div className={classes.logo}>
+            <button className={classes.button} onClick={showHiddenSideBar}>
+              <IoIosMenu className={classes.icon} />
+            </button>
+            <Link
+              href={
+                route.pathname !== "/" &&
+                route.pathname !== "/login" &&
+                route.pathname !== "/sign-up"
+                  ? "/browse"
+                  : "/"
+              }
+            >
+              <Image src={logo} alt="Logo" priority className={classes.img} />
+            </Link>
+            {route.pathname !== "/" &&
+            route.pathname !== "/login" &&
+            route.pathname !== "/sign-up" ? (
+              <div className={`${classes.links} ${showSideBar}`}>
+                <Link
+                  href={`/browse`}
+                  className={`${classes.browse} ${
+                    route.pathname === "/browse" ? classes.highlighted : ""
+                  }`}
+                >
+                  Home
+                </Link>
+                <Link
+                  href={"/"}
+                  className={`${classes.browse} ${
+                    route.pathname === "/sign-up" ? classes.highlighted : ""
+                  }`}
+                >
+                  TV Shows
+                </Link>
+                <Link
+                  href={"/movies"}
+                  className={`${classes.browse} ${
+                    route.pathname === "/movies" ? classes.highlighted : ""
+                  }`}
+                >
+                  Movies
+                </Link>
+                <Link
+                  href={`/browse/mylist:${id}`}
+                  className={`${classes.browse} ${
+                    route.pathname === "/browse/[mylist]"
+                      ? classes.highlighted
+                      : ""
+                  }`}
+                >
+                  My list
+                </Link>
+                <Link href={"/"} className={classes.browse}>
+                  New & Popular
+                </Link>
+              </div>
+            ) : null}
+          </div>
+          <div>
+            <ul>{login}</ul>
+          </div>
+        </nav>
+      </div>
+      {showSideBar === classes.translate ? (
+        <div className={classes.backdrop} onClick={showHiddenSideBar} />
+      ) : (
+        ""
+      )}
+    </>
   );
 }

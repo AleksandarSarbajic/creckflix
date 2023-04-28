@@ -6,3 +6,9 @@
   margin: 5rem 0 30rem 5rem;
   justify-content: flex-start;
 }
+@media only screen and (max-width: 50em) {
+  .grid {
+    justify-content: center;
+    margin: 5rem 0 30rem 0;
+  }
+}

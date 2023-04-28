@@ -3,7 +3,8 @@ import "react-multi-carousel/lib/styles.css";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
-import MovieItem from "./MovieItem";
+import SearchItem from "./Search/SearchItem";
+
 import classes from "../UI/LikedMovies.module.css";
 
 export default function TopMoviesList(props) {
@@ -44,25 +45,6 @@ export default function TopMoviesList(props) {
     [props, props.id, filteredMovies]
   );
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 6,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
   return (
     <div className={classes.box}>
       <h3 className={classes.header}>
@@ -75,18 +57,18 @@ export default function TopMoviesList(props) {
           Go to home page
         </Link>
       )}
-      <Carousel responsive={responsive} ssr={true} containerClass="zindex">
-        {movies.map((movie) => (
-          <MovieItem
-            id={movie.id}
-            key={movie.id}
-            image={movie.preview}
-            name={movie.name}
+      <div className={classes.grid}>
+        {movies.map((item) => (
+          <SearchItem
+            key={item.id}
+            id={item.id}
+            image={item.preview}
+            name={item.name}
             insertMovie={insertMovie}
-            user={filteredUser}
+            user={props.user}
           />
         ))}
-      </Carousel>
+      </div>
     </div>
   );
 }

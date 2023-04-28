@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
 
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 1.6rem 3rem;
   background-image: linear-gradient(
     180deg,
@@ -84,7 +84,13 @@
   display: none;
   font-size: 4rem;
 }
+.highlighted {
+  color: #fff;
+}
 @media only screen and (max-width: 62.5em) {
+  .links {
+    gap: 0;
+  }
   .icon {
     display: inline-block;
   }
@@ -95,7 +101,7 @@
     top: 5rem;
     width: 30rem;
     height: 100%;
-    padding: 3rem;
+    padding: 3rem 3rem 3rem 0;
 
     background-color: rgb(10, 10, 10);
     opacity: 0;
@@ -109,10 +115,34 @@
     font-size: 2rem;
     font-weight: 500;
     color: #808080;
+    padding: 1rem 0 1rem 2rem;
   }
   .translate {
     opacity: 1;
     visibility: visible;
     transform: translateX(0%);
   }
+  .highlighted:visited,
+  .highlighted:link {
+    color: #fff;
+    border-left: 3px solid #e50914;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .header {
+    padding: 0.8rem 1.5rem;
+  }
+  .logo {
+    gap: 1rem;
+  }
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  overflow-y: auto;
 }

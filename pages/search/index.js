@@ -25,7 +25,7 @@ export default function Search(props) {
 
   useEffect(() => {
     setisLoading(true);
-    async function createUserHandler(user) {
+    async function createUserHandler() {
       try {
         const response = await fetch(
           `https://eu-central-1.aws.data.mongodb-api.com/app/application-0-nizpq/endpoint/search?movie=${query.q}`

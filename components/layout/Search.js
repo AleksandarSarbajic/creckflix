@@ -72,7 +72,7 @@ export default function Search() {
             onChange={onChangeHandler}
             value={searchTerm}
           ></input>
-          <button className={classes.button} onClick={clearInputHandler}>
+          <button className={classes.clear} onClick={clearInputHandler}>
             {removeIcon}
           </button>
         </div>

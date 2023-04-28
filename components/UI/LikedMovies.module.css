@@ -1,5 +1,5 @@
 .header {
-  margin: 10rem 0 -5rem 6rem;
+  margin: 10rem 0 5rem 6rem;
   font-size: 3.6rem;
   font-weight: 500;
 }
@@ -17,4 +17,25 @@
 .link:active,
 .link:hover {
   color: #e50914a2;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+  column-gap: 0.5rem;
+  row-gap: 8rem;
+  margin: 5rem 0 30rem 5rem;
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 50em) {
+  .header {
+    margin: 10rem 0 5rem 0;
+    text-align: center;
+  }
+  .box {
+    margin-left: 0;
+  }
+  .grid {
+    justify-content: center;
+    margin: 5rem 0 30rem 0;
+  }
 }
