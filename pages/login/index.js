@@ -1,7 +1,7 @@
 import LoginForm from "@/components/UI/Login";
 import { useRouter } from "next/router";
 import { useState } from "react";
-
+import Head from "next/head";
 function LoginPage() {
   const [errorMsg, setErrorMsg] = useState("");
   const router = useRouter();
@@ -38,6 +38,14 @@ function LoginPage() {
       setErrorMsg("Invalid email/password input!");
     }
   }
-  return <LoginForm onLogin={onLoginUser} error={errorMsg} />;
+  return (
+    <>
+      <Head>
+        <title>Creckflix</title>
+        <meta name="login" content="login to website"></meta>
+      </Head>
+      <LoginForm onLogin={onLoginUser} error={errorMsg} />;
+    </>
+  );
 }
 export default LoginPage;

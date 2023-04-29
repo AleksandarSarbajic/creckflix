@@ -1,7 +1,7 @@
 import SingUp from "components/UI/SingUp.js";
 import { useRouter } from "next/router";
 import { useState } from "react";
-
+import Head from "next/head";
 // import { MongoClient } from "mongodb";
 function SignUp(props) {
   const [exist, setExist] = useState(false);
@@ -23,7 +23,15 @@ function SignUp(props) {
     setExist(false);
     router.push("/");
   }
-  return <SingUp createUser={createUserHandler} exists={exist} />;
+  return (
+    <>
+      <Head>
+        <title>Creckflix</title>
+        <meta name="login" content="login to website"></meta>
+      </Head>
+      <SingUp createUser={createUserHandler} exists={exist} />;
+    </>
+  );
 }
 
 export default SignUp;
