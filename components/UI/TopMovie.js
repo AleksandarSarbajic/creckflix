@@ -41,7 +41,7 @@ function TopMovie(props) {
         />
         <div className={classes.buttons}>
           <div>
-            <Link href={`/`} className={classes.play}>
+            <Link href={`/watch:38228382`} className={classes.play}>
               <BsFillPlayCircleFill />
             </Link>
 
