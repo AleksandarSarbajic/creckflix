@@ -6,6 +6,8 @@ import { MediaOutlet, MediaPlayer } from "@vidstack/react";
 export default function Player() {
   return (
     <MediaPlayer
+      load={"eager"}
+      autoplay
       src={[
         {
           src: "https://creckflix.s3.eu-north-1.amazonaws.com/Operation.Fortune.Ruse.de.Guerre.2023.720p.WEBRip.800MB.x264-GalaxyRG.ogv",
