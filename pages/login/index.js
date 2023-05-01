@@ -44,7 +44,7 @@ function LoginPage() {
         <title>Creckflix</title>
         <meta name="login" content="login to website"></meta>
       </Head>
-      <LoginForm onLogin={onLoginUser} error={errorMsg} />;
+      <LoginForm onLogin={onLoginUser} error={errorMsg} />
     </>
   );
 }
