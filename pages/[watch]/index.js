@@ -15,6 +15,7 @@ export default function Player() {
       poster="https://media-files.vidstack.io/poster.png"
       controls
     >
+      {/* dsdsddsdsdd */}
       <MediaOutlet />
     </MediaPlayer>
   );
