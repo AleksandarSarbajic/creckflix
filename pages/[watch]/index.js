@@ -8,26 +8,14 @@ export default function Player() {
   const [video, setVideo] = useState([]);
   useEffect(() => {
     setVideo(
-      <MediaPlayer
-        load={"eager"}
-        src={[
-          {
-            src: "https://creckflix.s3.eu-north-1.amazonaws.com/Operation.Fortune.Ruse.de.Guerre.2023.720p.WEBRip.800MB.x264-GalaxyRG.ogv",
-            type: "video/ogg",
-          },
-          {
-            src: "https://creckflix.s3.eu-north-1.amazonaws.com/Operation.Fortune.Ruse.de.Guerre.2023.720p.WEBRip.800MB.x264-GalaxyRG.avi",
-            type: "video/avi",
-          },
-          {
-            src: "https://creckflix.s3.eu-north-1.amazonaws.com/Operation.Fortune.Ruse.de.Guerre.mp4",
-            type: "video/mp4",
-          },
-        ]}
-        controls
-      >
-        <MediaOutlet />
-      </MediaPlayer>
+      <div className="kurac">
+        <iframe
+          src="https://iframe.mediadelivery.net/embed/119116/d4a877ba-e3ce-4d3f-b57c-e2cf8b242172?autoplay=false"
+          loading="lazy"
+          className="picka"
+          // allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        ></iframe>
+      </div>
     );
   }, []);
   return <>{video}</>;
