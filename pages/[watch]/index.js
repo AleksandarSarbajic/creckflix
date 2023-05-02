@@ -13,7 +13,8 @@ export default function Player() {
           src="https://iframe.mediadelivery.net/embed/119116/d4a877ba-e3ce-4d3f-b57c-e2cf8b242172?autoplay=false"
           loading="lazy"
           className="picka"
-          // allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allowFullScreen={true}
         ></iframe>
       </div>
     );
