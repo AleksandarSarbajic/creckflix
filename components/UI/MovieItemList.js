@@ -63,6 +63,7 @@ export default function MovieItemList(props) {
             name={movie.name}
             insertMovie={insertMovie}
             user={props.user}
+            video={movie.video}
           />
         ))}
       </Carousel>

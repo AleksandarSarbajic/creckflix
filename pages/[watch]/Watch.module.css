@@ -1,0 +1,16 @@
+.link:visited,
+.link:link {
+  position: fixed;
+  top: 1.5%;
+  left: 1.5%;
+  z-index: 2;
+  transition: all 0.3s;
+}
+.link:hover,
+.link:active {
+  transform: translateX(-10%);
+}
+.icon {
+  font-size: 5rem;
+  font-weight: 600;
+}

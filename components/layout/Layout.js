@@ -17,9 +17,9 @@ function Layout(props) {
         classes.layout
       }`}
     >
-      <MainNavigation></MainNavigation>
+      {router.pathname !== "/[watch]" && <MainNavigation></MainNavigation>}
       <main className={inter.className}>{props.children}</main>
-      <Footer />
+      {router.pathname !== "/[watch]" && <Footer />}
     </div>
   );
 }

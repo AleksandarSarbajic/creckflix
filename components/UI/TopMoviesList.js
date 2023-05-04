@@ -71,6 +71,7 @@ function TopMoviesList(props) {
               genre={movie.genre}
               insertMovie={insertMovie}
               user={props.user}
+              video={movie.video}
             />
           );
         })}

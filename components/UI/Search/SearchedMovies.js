@@ -3,7 +3,6 @@ import SearchItem from "./SearchItem";
 import { useCallback } from "react";
 
 export default function SearchedMovies(props) {
-  // console.log(props);
   const insertMovie = useCallback(
     async (movie) => {
       const user = { _id: props.id, movie: movie };
@@ -28,6 +27,7 @@ export default function SearchedMovies(props) {
           name={item.name}
           insertMovie={insertMovie}
           user={props.user}
+          video={item.video}
         />
       ))}
     </div>

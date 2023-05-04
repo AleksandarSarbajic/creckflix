@@ -147,6 +147,7 @@ export async function getServerSideProps() {
         time: movie.time,
         realese: movie.realese,
         stars: movie.stars,
+        video: movie.video,
         id: movie._id.toString(),
       })),
     },

@@ -1,6 +1,7 @@
 import classes from "../UI/FilteredMovies.module.css";
 import { CiCirclePlus, CiCircleCheck } from "react-icons/ci";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 export default function FilteredMovies(props) {
   const [isChecked, setIsChecked] = useState(false);
   const [liked, setIsLiked] = useState(
@@ -22,7 +23,9 @@ export default function FilteredMovies(props) {
 
   return (
     <div className={classes.item}>
-      <img src={props.img} className={classes.img} />
+      <Link href={`/watch?q=${props.video}`}>
+        <img src={props.img} className={classes.img} />
+      </Link>
       <div className={classes.about}>
         <span className={classes.border}>16+</span>
         <span className={classes.time}>{props.realese}</span>

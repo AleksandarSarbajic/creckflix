@@ -14,7 +14,7 @@ const inter = Inter({
 
 export default function MainNavigation() {
   const route = useRouter();
-  console.log(route.pathname);
+
   const [navClass, setNavClass] = useState("");
   const [showSideBar, setShowSideBar] = useState("");
   const [scrollY, setScrollY] = useState(0);

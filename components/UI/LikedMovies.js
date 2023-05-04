@@ -12,8 +12,9 @@ export default function TopMoviesList(props) {
   const [isLoading, setIsLoading] = useState(false);
   const filteredUser = props.user.filter((item) => item._id === props.id);
   const likedMovies = filteredUser[0].likedMovies;
-
+  console.log(likedMovies);
   let filteredMovies = movies.filter((movie) => likedMovies.includes(movie.id));
+  console.log(filteredMovies);
   useEffect(() => {
     setMovies(filteredMovies);
   }, []);
@@ -65,7 +66,8 @@ export default function TopMoviesList(props) {
             image={item.preview}
             name={item.name}
             insertMovie={insertMovie}
-            user={props.user}
+            user={filteredUser}
+            video={item.video}
           />
         ))}
       </div>

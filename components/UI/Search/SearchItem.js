@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function SearchItem(props) {
+  console.log(props.user[0]);
   const [isChecked, setIsChecked] = useState(false);
   const [liked] = useState(
     props.user[0].likedMovies.filter((item) => item === props.id)
@@ -36,7 +37,7 @@ export default function SearchItem(props) {
         </p>
         <div className={classes.buttons}>
           <div>
-            <Link href={`/`} className={classes.play}>
+            <Link href={`/watch?q=${props.video}`} className={classes.play}>
               <BsFillPlayCircleFill />
             </Link>
             <button className={classes.add} onClick={likeMovieHandler}>

@@ -28,7 +28,7 @@ function MoviePreview({ movie }) {
       </h1>
       {isVisible && <p className={classes.text}>{description}</p>}
       <div className={classes.buttons}>
-        <Link href={"/"} className={classes.play}>
+        <Link href={`/watch?q=${movie.video}`} className={classes.play}>
           <FaPlay className={classes.icon} />
           Play
         </Link>

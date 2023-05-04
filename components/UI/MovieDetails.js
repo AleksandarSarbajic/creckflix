@@ -57,7 +57,7 @@ export default function MovieDetails({ movie, filter, user, id }) {
       <div className={classes.overlay}>
         <h2 className={classes.name}>{movie.name}</h2>
         <div className={classes.links}>
-          <Link href="/browse" className={classes.play}>
+          <Link href={`/watch?q=${movie.video}`} className={classes.play}>
             <BsFillPlayFill className={classes.icon} />
             Play
           </Link>
@@ -114,6 +114,7 @@ export default function MovieDetails({ movie, filter, user, id }) {
             realese={movie.realese}
             user={user}
             insertMovie={insertMovie}
+            video={movie.video}
           />
         ))}
       </div>

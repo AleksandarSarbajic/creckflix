@@ -34,7 +34,7 @@ function MovieItem(props) {
         </p>
         <div className={classes.buttons}>
           <div>
-            <Link href={`/watch:38228382`} className={classes.play}>
+            <Link href={`/watch?q=${props.video}`} className={classes.play}>
               <BsFillPlayCircleFill />
             </Link>
             <button className={classes.add} onClick={likeMovieHandler}>
