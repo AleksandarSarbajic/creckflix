@@ -11,6 +11,8 @@ import { useRouter } from "next/router";
 export default function MyList(props) {
   const router = useRouter();
   const [isLoading, setisLoading] = useState(true);
+  const [isClicked, setIsClicked] = useState(false);
+  const [removedMovie, setRemovedMovie] = useState([]);
   useEffect(() => {
     setTimeout(() => {
       setisLoading(false);
@@ -28,8 +30,6 @@ export default function MyList(props) {
     }
   }, [id]);
 
-  const [isClicked, setIsClicked] = useState(false);
-  const [removedMovie, setRemovedMovie] = useState([]);
   function ShowRemovedMovieHandler(validation, movie) {
     setIsClicked(validation);
     setRemovedMovie(movie);
