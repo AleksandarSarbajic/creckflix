@@ -7,8 +7,10 @@ import { useEffect, useState } from "react";
 import { ColorRing } from "react-loader-spinner";
 
 import { useRouter } from "next/router";
+import UseStayIn from "@/components/custom hook/UseStayIn";
 
 export default function MyList(props) {
+  UseStayIn();
   const router = useRouter();
   const [isLoading, setisLoading] = useState(true);
   const [isClicked, setIsClicked] = useState(false);

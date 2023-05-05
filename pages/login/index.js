@@ -2,21 +2,11 @@ import LoginForm from "@/components/UI/Login";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Head from "next/head";
+import UseStayIn from "@/components/custom hook/UseStayIn";
 function LoginPage() {
+  UseStayIn();
   const [errorMsg, setErrorMsg] = useState("");
   const router = useRouter();
-  let checkLogin;
-  if (typeof window !== "undefined") {
-    // 👉️ can use localStorage here
-
-    checkLogin = localStorage.getItem("login");
-  } else {
-    // 👉️ can't use localStorage
-  }
-
-  if (checkLogin === "true") {
-    router.push("/browse");
-  }
 
   async function onLoginUser(user) {
     const response = await fetch("/api/login", {
@@ -30,7 +20,7 @@ function LoginPage() {
       (item) => item.email === user.email && item.password === user.password
     );
     if (account.length > 0) {
-      localStorage.setItem("login", user.stayLogin);
+      localStorage.setItem("login", true);
       localStorage.setItem("token", account[0]._id);
 
       router.push("/browse");

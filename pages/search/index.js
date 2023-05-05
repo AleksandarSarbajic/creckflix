@@ -6,13 +6,13 @@ import { ColorRing } from "react-loader-spinner";
 import classes from "../search/Index.module.css";
 import SearchedMovies from "@/components/UI/Search/SearchedMovies";
 import Link from "next/link";
-
+import UseStayIn from "@/components/custom hook/UseStayIn";
 export default function Search(props) {
+  UseStayIn();
   const { query, push } = useRouter();
   let id;
   if (typeof window !== "undefined") {
     id = localStorage.getItem("token");
-  } else {
   }
   const filteredUser = props.users.filter((item) => item._id === id);
   useEffect(() => {

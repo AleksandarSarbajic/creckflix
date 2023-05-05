@@ -2,8 +2,10 @@ import SingUp from "components/UI/SingUp.js";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Head from "next/head";
-// import { MongoClient } from "mongodb";
-function SignUp(props) {
+import UseStayIn from "@/components/custom hook/UseStayIn";
+
+export default function SignUp() {
+  UseStayIn();
   const [exist, setExist] = useState(false);
   // console.log(props);
   const router = useRouter();
@@ -33,8 +35,6 @@ function SignUp(props) {
     </>
   );
 }
-
-export default SignUp;
 
 // export async function getStaticProps(context) {
 //   console.log(context);

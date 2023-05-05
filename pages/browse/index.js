@@ -9,8 +9,9 @@ import { useRouter } from "next/router";
 import MovieDetails from "@/components/UI/MovieDetails";
 import { useEffect, useState } from "react";
 import { ColorRing } from "react-loader-spinner";
-
+import UseStayIn from "@/components/custom hook/UseStayIn";
 function UserLoggedIn(props) {
+  UseStayIn();
   const [isLoading, setisLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
