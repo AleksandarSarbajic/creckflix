@@ -34,6 +34,7 @@
   border-radius: 5px;
   margin-top: 1.6rem;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .button:hover {
   color: #eee;
@@ -87,7 +88,20 @@
   font-size: 1.4rem;
   color: #e50914;
 }
-
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3rem, 6rem));
+  gap: 1rem;
+  justify-content: center;
+}
+.profile {
+  display: inline-block;
+  max-width: 6rem;
+  padding: 0 !important;
+}
+.selected {
+  border: 2px solid #fff !important;
+}
 @media only screen and (max-width: 44em) {
   .modal {
     padding: 0 5rem 5rem 5rem;

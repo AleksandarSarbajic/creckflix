@@ -73,6 +73,14 @@ a {
   width: 100vw;
 }
 
+.white-bg {
+  background-color: #eee;
+  padding-top: 4rem;
+}
+.padding {
+  padding-bottom: 5rem;
+}
+
 @media only screen and (max-width: 87.5em) {
   .carousel {
     margin: 0 3rem;

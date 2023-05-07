@@ -4,8 +4,7 @@
   justify-content: center;
   gap: 10rem;
   align-items: center;
-  margin-top: 10rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
   padding-bottom: 2rem;
   border-top: 2px solid grey;
 }
@@ -35,8 +34,11 @@
   justify-content: space-between;
 }
 .icon {
-  color: #fff;
+  color: #999;
   font-size: 2.4rem;
+}
+.white {
+  background-color: #eee !important;
 }
 @media only screen and (max-width: 44em) {
   .footer {

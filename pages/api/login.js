@@ -9,7 +9,7 @@ async function handler(req, res) {
     const db = client.db();
 
     const userCollection = db.collection("users");
-    console.log(data);
+
     const accounts = await userCollection.find().toArray();
     client.close();
     res.status(201).json(accounts);

@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useEffect, useCallback, useState } from "react";
 import Search from "./Search";
 import { IoIosMenu } from "react-icons/io";
+import Profile from "./Profile";
 const inter = Inter({
   weight: ["500", "400", "600", "700"],
   subsets: ["latin"],
@@ -18,20 +19,17 @@ export default function MainNavigation() {
   const [navClass, setNavClass] = useState("");
   const [showSideBar, setShowSideBar] = useState("");
   const [scrollY, setScrollY] = useState(0);
-  const onScroll = useCallback(
-    (event) => {
-      const { pageYOffset } = window;
+  const onScroll = useCallback(() => {
+    const { pageYOffset } = window;
 
-      setScrollY(pageYOffset);
+    setScrollY(pageYOffset);
 
-      if (pageYOffset >= 150 && pageYOffset <= 300) {
-        setNavClass(classes.bg);
-      } else if (pageYOffset <= 150) {
-        setNavClass(classes.relative);
-      }
-    },
-    [classes.translate, showSideBar]
-  );
+    if (pageYOffset >= 150 && pageYOffset <= 300) {
+      setNavClass(classes.bg);
+    } else if (pageYOffset <= 150) {
+      setNavClass(classes.relative);
+    }
+  }, [classes.translate, showSideBar]);
 
   useEffect(() => {
     //add eventlistener to window
@@ -59,11 +57,28 @@ export default function MainNavigation() {
   } else if (
     route.pathname !== "/" &&
     route.pathname !== "/login" &&
+    route.pathname !== "/youAccount" &&
+    route.pathname !== "/sign-up"
+  ) {
+    login = (
+      <>
+        <li>
+          <Search />
+        </li>
+        <li>
+          <Profile />
+        </li>
+      </>
+    );
+  } else if (
+    route.pathname === "/youAccount" &&
+    route.pathname !== "/" &&
+    route.pathname !== "/login" &&
     route.pathname !== "/sign-up"
   ) {
     login = (
       <li>
-        <Search />
+        <Profile />
       </li>
     );
   }
@@ -105,6 +120,7 @@ export default function MainNavigation() {
             </Link>
             {route.pathname !== "/" &&
             route.pathname !== "/login" &&
+            route.pathname !== "/yourAccount" &&
             route.pathname !== "/sign-up" ? (
               <div className={`${classes.links} ${showSideBar}`}>
                 <Link

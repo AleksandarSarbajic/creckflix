@@ -31,7 +31,7 @@ export default function SignUp() {
         <title>Creckflix</title>
         <meta name="login" content="login to website"></meta>
       </Head>
-      <SingUp createUser={createUserHandler} exists={exist} />;
+      <SingUp createUser={createUserHandler} exists={exist} />
     </>
   );
 }

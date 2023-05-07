@@ -14,7 +14,14 @@ export default function UseStayIn(props) {
     }
 
     if (checkLogin !== "true") {
-      router.push("/");
+      if (
+        router.pathname === "/browse" ||
+        router.pathname === "/browse/[mylist]" ||
+        router.pathname === "/search" ||
+        router.pathname === "/movies"
+      ) {
+        router.push("/");
+      }
     }
     if (
       checkLogin === "true" &&

@@ -138,6 +138,7 @@ export async function getServerSideProps() {
         _id: item._id.toString(),
         name: item.name,
         likedMovies: item.likedMovies,
+        image: item.image,
       })),
       randomNumber: number,
       movies: movies.map((movie) => ({

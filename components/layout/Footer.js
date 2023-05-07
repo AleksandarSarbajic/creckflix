@@ -2,14 +2,21 @@ import classes from "../layout/Footer.module.css";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Inter } from "next/font/google";
+import { useRouter } from "next/router";
 
 const inter = Inter({
   weight: ["500", "400", "600", "700", "300"],
   subsets: ["latin"],
 });
 export default function Footer() {
+  const router = useRouter();
+
   return (
-    <footer className={`${classes.footer} ${inter.className}`}>
+    <footer
+      className={`${classes.footer} ${inter.className} ${
+        router.pathname === "/yourAccount" ? classes.white : ""
+      }`}
+    >
       <ul className={classes.list}>
         <li className={classes.item}>
           <Link href="/browse" className={classes.icons}>

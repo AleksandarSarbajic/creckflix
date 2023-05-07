@@ -22,6 +22,7 @@ function LoginPage() {
     if (account.length > 0) {
       localStorage.setItem("login", true);
       localStorage.setItem("token", account[0]._id);
+      localStorage.setItem("image", account[0].image);
 
       router.push("/browse");
     } else {
