@@ -36,7 +36,7 @@ export default function (props) {
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href={"/browse"} className={classes.link}>
+          <Link href={"/helpcenter"} className={classes.link}>
             <BiHelpCircle className={classes.icon} />
             Help Center
           </Link>

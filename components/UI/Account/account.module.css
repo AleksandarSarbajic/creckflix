@@ -83,6 +83,10 @@
   font-size: 1.6rem;
   font-weight: 500;
 }
+.link:hover,
+.link:active {
+  text-decoration: underline;
+}
 .item {
   text-align: right;
   margin-bottom: 0.8rem;
