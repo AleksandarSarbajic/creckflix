@@ -1,8 +1,18 @@
 import classes from "../Account/account.module.css";
 import Link from "next/link";
+import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
+
 export default function Account(props) {
   // console.log(props);
+  const [isClicked, setIsClicked] = useState(false);
+  function setClickedHandler() {
+    if (isClicked === false) {
+      setIsClicked(true);
+    } else {
+      setIsClicked(false);
+    }
+  }
   return (
     <div className={classes.container}>
       <h1 className={classes.header}>Account</h1>
@@ -160,10 +170,126 @@ export default function Account(props) {
             </div>
             <ul className={classes.right}>
               <li className={classes.item}>
-                <BsChevronDown />
+                <button
+                  className={`${classes.btnicon} ${
+                    isClicked ? classes.rotate : ""
+                  }`}
+                  onClick={setClickedHandler}
+                >
+                  <BsChevronDown className={classes.icon} />
+                </button>
               </li>
             </ul>
           </div>
+          {isClicked && (
+            <>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <div className={classes.textover}>
+                    <p className={classes.name}>Language</p>
+                    <p className={classes.maturnity}>English</p>
+                  </div>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      Change
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <div className={classes.textover}>
+                    <p className={classes.name}>Viewing Restrictions</p>
+                    <p className={classes.maturnity}>No Restrictions.</p>
+                  </div>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      Change
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <div className={classes.textover}>
+                    <p className={classes.name}>Profile Lock</p>
+                    <p className={classes.maturnity}>Off</p>
+                  </div>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      Change
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <p className={classes.name}>Transfer this profile</p>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      Transfer
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <p className={classes.name}>Viewing activity</p>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      View
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <p className={classes.name}>Ratings</p>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      View
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <p className={classes.name}>Subtitle appearance</p>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      Change
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className={classes.mainside}>
+                <div className={classes.images}>
+                  <p className={classes.name}>Playback settings</p>
+                </div>
+                <ul className={classes.right}>
+                  <li className={classes.item}>
+                    <Link href={"/"} className={classes.link}>
+                      Change
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </>
+          )}
         </div>
       </div>
       <div className={classes.outline} />

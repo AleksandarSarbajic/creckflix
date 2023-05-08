@@ -125,3 +125,57 @@
   font-weight: 500;
   opacity: 0.8;
 }
+.icon {
+  font-size: 2.4rem;
+  color: #555;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.btnicon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    padding: 0 4rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+  .left {
+    width: 75%;
+  }
+  .link:visited,
+  .link:link {
+    font-size: 1.8rem;
+  }
+  .header {
+    font-size: 3.6rem;
+  }
+  .about {
+    font-size: 2.4rem;
+  }
+  .email {
+    font-size: 1.7rem;
+  }
+  .password {
+    font-size: 1.8rem;
+  }
+  .text,
+  .name,
+  .date {
+    font-size: 1.6rem;
+  }
+  .maturnity {
+    font-size: 1.4rem;
+  }
+}
