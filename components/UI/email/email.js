@@ -14,8 +14,12 @@ export default function ChangeEmail(props) {
   console.log(props.email);
   function onSubmitHandler(e) {
     // console.log(user);
-    e.preventDefault();
+
     props.onClick();
+  }
+  function moveToPasswordHandler(e) {
+    // console.log(user);
+    route.push("/password");
   }
 
   return (
@@ -42,7 +46,7 @@ export default function ChangeEmail(props) {
         </button>
         <button
           className={`${classes.box} ${inter.className} ${classes.second}`}
-          onClick={onSubmitHandler}
+          onClick={moveToPasswordHandler}
         >
           <div className={classes.inner}>
             <MdOutlineEmail className={classes.red} />
