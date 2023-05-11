@@ -31,12 +31,12 @@ export default function Account(props) {
             </div>
             <ul className={classes.right}>
               <li className={classes.item}>
-                <Link href={"/"} className={classes.link}>
+                <Link href={"/email"} className={classes.link}>
                   Change account email
                 </Link>
               </li>
               <li className={classes.item}>
-                <Link href={"/"} className={classes.link}>
+                <Link href={"/password"} className={classes.link}>
                   Change password
                 </Link>
               </li>

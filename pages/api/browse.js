@@ -36,7 +36,7 @@ export default async function handler(req, res) {
       .find({ _id: new ObjectId(_id) })
       .toArray();
 
-    res.status(201).json(accounts);
     client.close();
+    res.status(201).json(accounts);
   }
 }
