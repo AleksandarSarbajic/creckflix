@@ -146,17 +146,17 @@ export default async function handler(req, res) {
               <div class="outline"></div>
             
               <a
-              href="http://localhost:3000/email/${data._id}"
+              href="https://creckflix.vercel.app/email/${data._id}"
               class="button"
               >Reset your email</a
               >
             
               <p class="link">
                 Or click this link:<a
-                  href="http://localhost:3000/email/${data._id}"
+                  href="https://creckflix.vercel.app/email/${data._id}"
                   
                 >
-                  http://localhost:3000/email/${data._id}</a
+                  https://creckflix.vercel.app/email/${data._id}</a
                 >
               </p>
               <div class="footer">
