@@ -96,7 +96,7 @@ async function handler(req, res) {
               }
               .text {
                 font-size: 14px;
-                margin: 0 20px 10px 0;
+                margin: 0 20px 10px 20px;
                 text-align: center;
                 line-height: 1.5;
               }
