@@ -8,10 +8,13 @@ import { useRouter } from "next/router";
 export default function (props) {
   const route = useRouter();
   const [image, setImage] = useState("");
+  const [id, setId] = useState("");
 
   useEffect(() => {
     const url = localStorage.getItem("image");
+    const id = localStorage.getItem("token");
     setImage(url);
+    setId(id);
   }, []);
   function LogOutUserHandler() {
     localStorage.removeItem("image");
@@ -25,8 +28,8 @@ export default function (props) {
       <span className={classes.rotate}>&#10094;</span>
       <ul className={classes.listed}>
         <li className={classes.item}>
-          <Link href={"/browse"} className={classes.link}>
-            <GoPencil className={classes.icon} /> Menage Profiles
+          <Link href={`/menage?q=${id}`} className={classes.link}>
+            <GoPencil className={classes.icon} /> Menage Profile
           </Link>
         </li>
         <li className={classes.item}>

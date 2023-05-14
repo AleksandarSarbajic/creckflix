@@ -1,0 +1,54 @@
+.bar {
+  position: fixed;
+  padding-top: 10rem;
+  z-index: 100;
+  background: #141414;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container,
+.nav {
+  color: #fff;
+  max-width: 110rem;
+  width: 110rem;
+  margin: 0 auto;
+}
+.container {
+  padding-top: 30rem;
+}
+.arrow {
+  font-size: 5rem;
+}
+.flex {
+  display: flex;
+  gap: 3rem;
+}
+.heading {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.subheading {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.profile {
+  width: 8rem;
+  border-radius: 5px;
+}
+.name {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.header {
+  font-size: 5rem;
+  font-weight: 500;
+}

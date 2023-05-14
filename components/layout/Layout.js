@@ -17,9 +17,21 @@ function Layout(props) {
         classes.layout
       }`}
     >
-      {router.pathname !== "/[watch]" && <MainNavigation></MainNavigation>}
+      {router.pathname === "/[watch]" ? (
+        ""
+      ) : router.pathname === "/menage" ? (
+        ""
+      ) : (
+        <MainNavigation />
+      )}
       <main className={inter.className}>{props.children}</main>
-      {router.pathname !== "/[watch]" && <Footer />}
+      {router.pathname === "/[watch]" ? (
+        ""
+      ) : router.pathname === "/menage" ? (
+        ""
+      ) : (
+        <Footer />
+      )}
     </div>
   );
 }

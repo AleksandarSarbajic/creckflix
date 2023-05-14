@@ -16,7 +16,8 @@ export default function Footer() {
       className={`${classes.footer} ${inter.className} ${
         router.pathname === "/yourAccount" ||
         router.pathname === "/email" ||
-        router.pathname === "/password"
+        router.pathname === "/password" ||
+        router.pathname === "/email/[change]"
           ? classes.white
           : ""
       }`}
