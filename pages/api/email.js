@@ -16,8 +16,8 @@ export default async function handler(req, res) {
       await transporter.sendMail({
         from: "creckflix@gmail.com",
         to: account[0].email,
-        subject: "Requst to change your email",
-        text: "Here is the link to website, for your email change request",
+        subject: "Your Password was changed!",
+        text: "Here is the link to website, enjoy new movies!",
         html: `<!DOCTYPE html>
         <html lang="en">
           <head>
@@ -135,12 +135,12 @@ export default async function handler(req, res) {
               </div>
               <div class="content">
                 <p class="align">
-                  Hey ${account[0].name}, did you want to reset your password?
+                  Hey ${account[0].name}, did you want to reset your email adress?
                 </p>
                 <p class="text">
-                  Someone (hopefully you) has asked us to reset the password for your
-                  Twitch account. Please click the button below to do so. If you didn't
-                  request this password reset, you can go ahead and ignore this email!
+                  Someone (hopefully you) has asked us to reset the email adress for your
+                  CreckFlix account. Please click the button below to do so. If you didn't
+                  request this email adress reset, you can go ahead and ignore this email!
                 </p>
               </div>
               <div class="outline"></div>

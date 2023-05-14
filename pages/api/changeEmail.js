@@ -8,26 +8,26 @@ export default async function handler(req, res) {
       "mongodb+srv://sleasarbajic:FIEzTsepUaCSR79i@creck.ougdyzb.mongodb.net/users?retryWrites=true&w=majority"
     );
     const db = client.db();
-    const passwords = data.passwords;
+    const emails = data.emails;
     const userCollection = db.collection("users");
 
     const account = await userCollection
       .find({ _id: new ObjectId(data._id) })
       .toArray();
-    if (account[0].password === passwords.currentPassword) {
+    if (account[0].email === emails.currentEmail) {
       if (
-        account[0].password !== passwords.newPassword &&
-        passwords.newPassword === passwords.enteredPassword
+        account[0].email !== emails.newEmail &&
+        emails.newEmail === emails.enteredEmail
       ) {
         const update = await userCollection.updateOne(
           { _id: new ObjectId(data._id) },
-          { $set: { password: `${passwords.newPassword}` } }
+          { $set: { email: `${emails.newEmail}` } }
         );
         try {
           await transporter.sendMail({
             from: "creckflix@gmail.com",
             to: emails.newEmail,
-            subject: "Email was changed!",
+            subject: "Your Email was changed!",
             text: "Here is the link to website, enjoy new movies!",
             html: `<!DOCTYPE html>
             <html lang="en">
@@ -146,7 +146,7 @@ export default async function handler(req, res) {
                   </div>
                   <div class="content">
                     <p class="align">
-                      Hey ${account[0].name}, your email has been updated!
+                      Hey ${account[0].name}, your password has been updated!
                     </p>
                     <p class="text">
                       Your new email adress is set to go!
@@ -155,17 +155,17 @@ export default async function handler(req, res) {
                   <div class="outline"></div>
                 
                   <a
-                  href="https://creckflix.vercel.app/email/${data._id}"
+                  href="https://creckflix.vercel.app"
                   class="button"
-                  >Reset your email</a
+                  >Visit our website</a
                   >
                 
                   <p class="link">
                     Or click this link:<a
-                      href="https://creckflix.vercel.app/email/${data._id}"
+                      href="https://creckflix.vercel.app"
                       
                     >
-                      https://creckflix.vercel.app/email/${data._id}</a
+                      https://creckflix.vercel.app</a
                     >
                   </p>
                   <div class="footer">
@@ -181,12 +181,11 @@ export default async function handler(req, res) {
           console.log(error);
           return res.status(400).json({ message: error.message });
         }
-        res.status(200).json({ message: "updated" });
       } else {
-        res.status(401).json({ message: "bad passwords" });
+        res.status(401).json({ message: "bad emails" });
       }
     } else {
-      res.status(403).json({ message: "wrong password" });
+      res.status(403).json({ message: "wrong email" });
     }
     client.close();
 
