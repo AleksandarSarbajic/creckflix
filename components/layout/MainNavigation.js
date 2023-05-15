@@ -109,9 +109,15 @@ export default function MainNavigation() {
           }`}
         >
           <div className={classes.logo}>
-            <button className={classes.button} onClick={showHiddenSideBar}>
-              <IoIosMenu className={classes.icon} />
-            </button>
+            {route.pathname !== "/" &&
+            route.pathname !== "/login" &&
+            route.pathname !== "/sign-up" ? (
+              <button className={classes.button} onClick={showHiddenSideBar}>
+                <IoIosMenu className={classes.icon} />
+              </button>
+            ) : (
+              ""
+            )}
             <Link
               href={
                 route.pathname !== "/" &&
