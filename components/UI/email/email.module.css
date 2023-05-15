@@ -1,5 +1,5 @@
 .bg {
-  width: 140rem;
+  max-width: 140rem;
   margin: 0 auto;
   color: #000;
   text-align: center;

@@ -40,6 +40,10 @@
 .white {
   background-color: #eee !important;
 }
+.iconss {
+  display: flex;
+  justify-content: space-between;
+}
 @media only screen and (max-width: 44em) {
   .footer {
     gap: 3rem 5rem;

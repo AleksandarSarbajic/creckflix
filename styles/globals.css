@@ -61,17 +61,6 @@ a {
   font-size: 1.4rem;
 }
 /* ssasassassas */
-.kurac {
-  position: relative;
-  padding-top: 56.25%;
-}
-.picka {
-  border: none;
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-}
 
 .white-bg {
   background-color: #eee;

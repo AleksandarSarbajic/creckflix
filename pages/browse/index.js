@@ -93,7 +93,7 @@ function UserLoggedIn(props) {
         <MovieItemList
           movies={props.movies}
           user={filteredUser}
-          title="New Realses"
+          title="Always good to watch"
           id={id}
         />
       )}

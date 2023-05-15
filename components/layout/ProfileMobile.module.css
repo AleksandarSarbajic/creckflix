@@ -1,0 +1,34 @@
+.container {
+  display: none;
+  /* flex-direction: column; */
+}
+.link:visited,
+.link:link,
+.button {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #808080;
+  padding: 1rem 0 0 2rem;
+
+  display: inline-block;
+}
+.image {
+  width: 8rem;
+  padding: 1rem 0 0 2rem;
+}
+.button {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding-bottom: 2rem;
+}
+.outline {
+  height: 0.5px;
+  background-color: #888;
+}
+@media only screen and (max-width: 50em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}

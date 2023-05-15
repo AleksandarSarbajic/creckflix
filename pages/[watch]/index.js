@@ -19,11 +19,11 @@ export default function Player() {
     const id = query;
     let url = `https://iframe.mediadelivery.net/embed/119116/${id}?autoplay=false&preload=false`;
     setVideo(
-      <div className="kurac">
+      <div className={classes.position}>
         <iframe
           src={url}
           loading="lazy"
-          className="picka"
+          className={classes.size}
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           allowFullScreen={true}
         ></iframe>

@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       await transporter.sendMail({
         from: "creckflix@gmail.com",
         to: account[0].email,
-        subject: "Your Password was changed!",
+        subject: "Your Request for email change!",
         text: "Here is the link to website, enjoy new movies!",
         html: `<!DOCTYPE html>
         <html lang="en">

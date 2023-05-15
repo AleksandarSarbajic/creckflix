@@ -101,7 +101,7 @@
     top: 5rem;
     width: 30rem;
     height: 100%;
-    padding: 3rem 3rem 3rem 0;
+    padding: 3rem 0 3rem 0;
 
     background-color: rgb(10, 10, 10);
     opacity: 0;
@@ -115,7 +115,8 @@
     font-size: 2rem;
     font-weight: 500;
     color: #808080;
-    padding: 1rem 0 1rem 2rem;
+    padding: 0.5rem 0 1rem 2rem;
+    margin-top: 0.5rem;
   }
   .translate {
     opacity: 1;

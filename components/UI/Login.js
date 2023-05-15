@@ -47,7 +47,7 @@ function LoginForm(props) {
   }
   return (
     <div className={classes.modal + " " + inter.className}>
-      <h2 className={classes.text}>Sign In</h2>
+      <h2 className={classes.text}>Sign Up</h2>
       <form onSubmit={submitHandler} className={classes.form}>
         <input
           type="email"

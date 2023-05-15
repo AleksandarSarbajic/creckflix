@@ -23,7 +23,7 @@ export default function (props) {
     route.push("/");
   }
   return (
-    <>
+    <div className={classes.container}>
       <img src={image} className={classes.image} />
       <span className={classes.rotate}>&#10094;</span>
       <ul className={classes.listed}>
@@ -49,6 +49,6 @@ export default function (props) {
           Sign out from Creckflix
         </button>
       </ul>
-    </>
+    </div>
   );
 }

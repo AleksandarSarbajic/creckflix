@@ -23,30 +23,43 @@ export default function Footer() {
       }`}
     >
       <ul className={classes.list}>
-        <li className={classes.item}>
-          <Link href="/browse" className={classes.icons}>
+        <li className={`${classes.item} ${classes.iconss}`}>
+          <Link
+            href="https://www.facebook.com/profile.php?id=100092553317114&is_tour_dismissed=true"
+            className={classes.icons}
+          >
             <FaFacebookF className={classes.icon} />
+          </Link>
+          <Link
+            href="https://www.instagram.com/creckflix/"
+            className={classes.icons}
+          >
             <FaInstagram className={classes.icon} />
+          </Link>
+          <Link
+            href="https://www.instagram.com/creckflix/"
+            className={classes.icons}
+          >
             <FaYoutube className={classes.icon} />
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Audio Description
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Investor Relations
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Legal Notices
           </Link>
         </li>
         <li className={`${classes.item} ${classes.box}`}>
-          <Link href="/browse" className={`${classes.link}`}>
+          <Link href="/helpcenter" className={`${classes.link}`}>
             Service Code
           </Link>
         </li>
@@ -54,51 +67,51 @@ export default function Footer() {
       </ul>
       <ul className={classes.list}>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Help Center
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Jobs
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Cookie Preferences
           </Link>
         </li>
       </ul>
       <ul className={classes.list}>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Gift Cards
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Terms of use
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Corporate Information
           </Link>
         </li>
       </ul>
       <ul className={classes.list}>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Media Center
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Privacy
           </Link>
         </li>
         <li className={classes.item}>
-          <Link href="/browse" className={classes.link}>
+          <Link href="/helpcenter" className={classes.link}>
             Contact Us
           </Link>
         </li>

@@ -8,6 +8,7 @@ import { useEffect, useCallback, useState } from "react";
 import Search from "./Search";
 import { IoIosMenu } from "react-icons/io";
 import Profile from "./Profile";
+import ProfileMobile from "./ProfileMobile";
 const inter = Inter({
   weight: ["500", "400", "600", "700"],
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function MainNavigation() {
   const [navClass, setNavClass] = useState("");
   const [showSideBar, setShowSideBar] = useState("");
   const [scrollY, setScrollY] = useState(0);
+
   const onScroll = useCallback(() => {
     const { pageYOffset } = window;
 
@@ -35,6 +37,7 @@ export default function MainNavigation() {
     //add eventlistener to window
     window.addEventListener("scroll", onScroll, { passive: true });
     // remove event on unmount to prevent a memory leak with the cleanup
+
     return () => {
       window.removeEventListener("scroll", onScroll, { passive: true });
     };
@@ -57,7 +60,8 @@ export default function MainNavigation() {
   } else if (
     route.pathname !== "/" &&
     route.pathname !== "/login" &&
-    route.pathname !== "/youAccount" &&
+    route.pathname !== "/yourAccount" &&
+    route.pathname !== "/helpcenter" &&
     route.pathname !== "/sign-up"
   ) {
     login = (
@@ -71,10 +75,11 @@ export default function MainNavigation() {
       </>
     );
   } else if (
-    route.pathname === "/youAccount" &&
-    route.pathname !== "/" &&
-    route.pathname !== "/login" &&
-    route.pathname !== "/sign-up"
+    route.pathname === "/yourAccount" ||
+    (route.pathname === "/helpcenter" &&
+      route.pathname !== "/" &&
+      route.pathname !== "/login" &&
+      route.pathname !== "/sign-up")
   ) {
     login = (
       <li>
@@ -120,9 +125,9 @@ export default function MainNavigation() {
             </Link>
             {route.pathname !== "/" &&
             route.pathname !== "/login" &&
-            route.pathname !== "/yourAccount" &&
             route.pathname !== "/sign-up" ? (
               <div className={`${classes.links} ${showSideBar}`}>
+                <ProfileMobile />
                 <Link
                   href={`/browse`}
                   className={`${classes.browse} ${

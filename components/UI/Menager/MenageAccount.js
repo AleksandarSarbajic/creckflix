@@ -3,6 +3,7 @@ import classes from "../Menager/Menage.module.css";
 import { useState } from "react";
 import { GoPencil } from "react-icons/go";
 import Icons from "./Icons";
+
 export default function MenageAccount(props) {
   const route = useRouter();
   const [name, setName] = useState(props.user.name);
