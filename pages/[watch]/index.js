@@ -34,7 +34,7 @@ export default function Player() {
     <>
       <Head>
         <title>Creckflix</title>
-        <meta name="watch" content="watch a movie"></meta>
+        <meta name="watch" content="watch a movie!"></meta>
       </Head>
       <Link href="/browse" className={classes.link}>
         <BsArrowLeft className={classes.icon} />
