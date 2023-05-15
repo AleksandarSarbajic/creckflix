@@ -14,14 +14,17 @@
 .nav {
   color: #fff;
   max-width: 110rem;
-  width: 110rem;
+
   margin: 0 auto;
 }
+
 .container {
-  padding-top: 30rem;
+  padding: 30rem 3rem 2rem 3rem;
+  animation: Animation 0.45s forwards;
 }
 .arrow {
   font-size: 5rem;
+  cursor: pointer;
 }
 .flex {
   display: flex;
@@ -51,4 +54,39 @@
 .header {
   font-size: 5rem;
   font-weight: 500;
+  margin-bottom: 3rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.image {
+  max-width: 15rem;
+  display: inline-block;
+  justify-self: center;
+  border-radius: 5px;
+}
+.image:hover {
+  outline: 3px solid #fff;
+}
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.out {
+  outline: 3px solid #fff;
+}
+@keyframes Animation {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

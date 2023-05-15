@@ -1,6 +1,7 @@
 .container {
   max-width: 80rem;
   margin: 8rem auto;
+  animation: Animation 0.45s forwards;
 }
 .heading {
   font-size: 3.6vw;
@@ -88,4 +89,14 @@
   border: 1px solid grey;
   background-color: transparent;
   color: grey;
+}
+@keyframes Animation {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

@@ -7,6 +7,7 @@ export default function MenageAccount(props) {
   const route = useRouter();
   const [name, setName] = useState(props.user.name);
   const [showIcons, setShowIcons] = useState(false);
+  const [image, setImage] = useState(props.user.image);
   function onChangeHandler(e) {
     setName(e.target.value);
     console.log(name);
@@ -17,10 +18,25 @@ export default function MenageAccount(props) {
   function showIconsHanlder() {
     setShowIcons(true);
   }
+  function getImageHandler(img) {
+    setImage(img);
+    setShowIcons(false);
+  }
+  function submitHandler() {
+    const account = { name, image };
+    props.change(account);
+  }
+  function deleteHandler() {
+    props.delete();
+  }
   return (
     <>
       {showIcons && (
-        <Icons name={props.user.name} image={props.user.image}></Icons>
+        <Icons
+          name={props.user.name}
+          image={props.user.image}
+          get={getImageHandler}
+        ></Icons>
       )}
       {!showIcons && (
         <div className={classes.container}>
@@ -28,11 +44,7 @@ export default function MenageAccount(props) {
           <div className={classes.outline} />
           <div className={classes.sides}>
             <div className={classes.leftside}>
-              <img
-                src={props.user.image}
-                className={classes.img}
-                alt="Profile Picture"
-              />
+              <img src={image} className={classes.img} alt="Profile Picture" />
               <button className={classes.change} onClick={showIconsHanlder}>
                 <GoPencil className={classes.icon} />
               </button>
@@ -54,11 +66,15 @@ export default function MenageAccount(props) {
           </div>
           <div className={classes.outline} />
           <div className={classes.buttons}>
-            <button className={classes.save}>Save</button>
+            <button className={classes.save} onClick={submitHandler}>
+              Save
+            </button>
             <button className={classes.button} onClick={moveHandler}>
               Cancel
             </button>
-            <button className={classes.button}>Delete Profile</button>
+            <button className={classes.button} onClick={deleteHandler}>
+              Delete Profile
+            </button>
           </div>
         </div>
       )}
