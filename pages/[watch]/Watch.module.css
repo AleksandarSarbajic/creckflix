@@ -32,11 +32,7 @@
   .size {
     border: none;
     position: absolute;
-    top: 0;
-    height: 50vh;
-    width: 100vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+    /* transform: translate(-50%, -50%); */
   }
 }

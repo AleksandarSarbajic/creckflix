@@ -137,7 +137,7 @@ export default function MainNavigation() {
                   Home
                 </Link>
                 <Link
-                  href={"/"}
+                  href={"/movies"}
                   className={`${classes.browse} ${
                     route.pathname === "/sign-up" ? classes.highlighted : ""
                   }`}
@@ -162,7 +162,7 @@ export default function MainNavigation() {
                 >
                   My list
                 </Link>
-                <Link href={"/"} className={classes.browse}>
+                <Link href={"/movies"} className={classes.browse}>
                   New & Popular
                 </Link>
               </div>
