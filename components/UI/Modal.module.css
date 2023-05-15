@@ -18,7 +18,7 @@
   overflow: hidden;
   z-index: 99999999999999;
   position: absolute;
-  top: 65rem;
+  top: 55rem;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100rem;
@@ -31,7 +31,7 @@
 @media only screen and (max-width: 62.5em) {
   .modal {
     /* top: 55%; */
-    /* top: 80rem; */
+    top: 65rem;
 
     max-width: 87.5rem;
   }

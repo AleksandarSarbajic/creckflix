@@ -33,7 +33,7 @@ a {
 }
 .carousel {
   height: 20rem;
-  margin: 0 5rem;
+  padding: 0 5rem;
 }
 .trending {
   font-size: 2.8rem;
@@ -72,7 +72,7 @@ a {
 
 @media only screen and (max-width: 87.5em) {
   .carousel {
-    margin: 0 3rem;
+    padding: 0 3rem;
   }
 }
 @media only screen and (max-width: 75em) {
@@ -90,7 +90,7 @@ a {
 }
 @media only screen and (max-width: 50em) {
   .carousel {
-    margin: 0 0 0 3rem;
+    padding: 0 0 0 3rem;
   }
   .zindex {
     padding: 10rem 0;
@@ -106,7 +106,7 @@ a {
     font-size: 6rem !important;
   }
   .carousel {
-    margin: 0 1rem 0 3rem;
+    padding: 0 1rem 0 3rem;
   }
   .zindex {
     padding: 10rem 0;
@@ -114,7 +114,7 @@ a {
 }
 @media only screen and (max-width: 31.25em) {
   .carousel {
-    margin-left: 1rem;
+    padding-left: 1rem;
   }
   .trendin {
     margin: 0;
@@ -133,7 +133,7 @@ a {
     font-size: 5.4rem;
   }
   .carousel {
-    margin: 0 3rem 0 12rem;
+    padding: 0 3rem 0 12rem;
   }
   .zindex {
     padding: 10rem 1rem 10rem 0;
@@ -141,7 +141,7 @@ a {
 }
 @media only screen and (max-width: 24.5em) {
   .carousel {
-    margin: 0 3rem 0 10rem;
+    padding: 0 3rem 0 10rem;
   }
 }
 @media only screen and (max-width: 22.5em) {

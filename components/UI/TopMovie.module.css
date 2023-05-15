@@ -180,3 +180,8 @@
     visibility: visible;
   }
 }
+@media only screen and (max-width: 50em) {
+  .place {
+    font-size: 15rem;
+  }
+}
