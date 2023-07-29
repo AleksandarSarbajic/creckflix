@@ -17,7 +17,7 @@ export default function Player() {
 
   useEffect(() => {
     const id = query;
-    let url = `https://iframe.mediadelivery.net/embed/124679/${id}?autoplay=false&preload=false`;
+    let url = `https://iframe.mediadelivery.net/embed/142512/${id}?autoplay=false&preload=false`;
     setVideo(
       <div className={classes.position}>
         <iframe
