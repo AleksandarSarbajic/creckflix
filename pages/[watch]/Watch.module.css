@@ -5,17 +5,17 @@
   left: 1.5%;
   z-index: 2;
   transition: all 0.3s;
-  color: #000 !important;
+  color: #e50914 !important;
 }
 .link:hover,
 .link:active {
   transform: translateX(-10%);
-  color: #000 !important;
+  color: #e50914 !important;
 }
 .icon {
   font-size: 5rem;
   font-weight: 600;
-  color: #000 !important;
+  color: #e50914 !important;
 }
 .position {
   position: relative;
