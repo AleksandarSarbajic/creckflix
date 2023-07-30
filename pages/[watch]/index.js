@@ -37,7 +37,7 @@ export default function Player() {
         <meta name="watch" content="watch a movie!"></meta>
       </Head>
       <Link href="/browse" className={classes.link}>
-        <BsArrowLeft className={classes.icon} />
+        <BsArrowLeft className={classes.icon} stroke="#000" fill="#000" />
       </Link>
       {video}
     </>
