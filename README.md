@@ -1,18 +1,18 @@
 <div align="center">
- <img  src="https://github.com/AleksandarSarbajic/the-wild-oasis/blob/main/public/logo-dark.png"/>
+ <img src="https://github.com/AleksandarSarbajic/creckflix/blob/main/public/img/logo.png"/>
  </div>
+
 
 <div align="center">
 <img src="https://img.shields.io/npm/v/npm.svg?logo=npm"/>
 <img src="https://img.shields.io/badge/react-v18.2.0-blue?logo=react"/>
-<img src="https://img.shields.io/badge/redux/toolkit-v1.9.5-purple?logo=redux"/>
-<img src="https://img.shields.io/badge/reactrouterdom-v6.14.2-red?logo=reactrouter"/>
-<img src="https://img.shields.io/badge/sass-v1.62.1-pink?logo=sass"/>
-<img src="https://img.shields.io/badge/firebase-v10.4.0-orange?logo=firebase"/>
+<img src="https://img.shields.io/badge/nextjs-v13.4.0-black?logo=nextdotjs"/>
+<img src="https://img.shields.io/badge/mongodb-v5.1.0-green?logo=mongodb"/>
+<img src="https://img.shields.io/badge/nodejs-v18.12.1-green?logo=nodedotjs"/>
 </div>  
+ 
 
-
-<p align="center">Tasty Trail is delivery app, that has a lot of restaurants and markets so you can order from your favorite places</p>
+<p align="center">Creckflix is an app where you can watch movies anywhere for free</p>
 
 <div align="center">
   
@@ -25,11 +25,11 @@
 ## Technologies Used
 
   - [React](https://react.dev/)
-  - [React Router Dom](https://reactrouter.com/en/main)
-  - [Sass](https://sass-lang.com/)
-  - [Redux Tollkit](https://redux-toolkit.js.org/)
+  - [NextJS](https://nextjs.org/)
+  - [MongoDB](https://www.mongodb.com/)
+  - [NodeJS](https://nodejs.org/en)
   - [React multi carousel](https://github.com/YIZHUANG/react-multi-carousel)
-  - [Firebase](https://firebase.google.com/)
+ 
 
 
 ## Screenshot
@@ -42,10 +42,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com/) and [
 
 ```
 # Clone this repository 
-$ git clone https://github.com/AleksandarSarbajic/Tasty-Trail
+$ git clone https://github.com/AleksandarSarbajic/creckflix
 
 # Go into the repository
-$ cd Tasty-Trail
+$ cd creckflix
 
 # Install dependencies
 $ npm install
