@@ -14,11 +14,17 @@
 
 <p align="center">Creckflix is an app where you can watch movies anywhere for free</p>
 
+<p align="center">*DISCLAMER* watching movie is disabled because of copyright </p>
+
+
+
 <div align="center">
   
 <a href="#quicstart" >Quickstart</a> • <a href="#technologies-used" align="center">Technologies Used</a> •  <a href="#screenshot" align="center"> Screenshot </a> • <a href="#you-may-also-like" align="center"> You may also like  </a> •  <a href="#license" align="center"> License  </a> 
 
 •<a href="https://creckflix.vercel.app/" align="Center">Live Server</a>
+
+
 
 </div>
 
@@ -26,15 +32,18 @@
 
   - [React](https://react.dev/)
   - [NextJS](https://nextjs.org/)
-  - [MongoDB](https://www.mongodb.com/)
-  - [NodeJS](https://nodejs.org/en)
+  - [MongoDB](https://www.mongodb.com/) - for data
+  - [NodeJS](https://nodejs.org/en) - for backend
   - [React multi carousel](https://github.com/YIZHUANG/react-multi-carousel)
  
 
 
 ## Screenshot
 
-![Screenshot 2023-09-30 164953](https://github.com/AleksandarSarbajic/the-wild-oasis/assets/114814838/528ab328-dc51-4f0a-baad-f825b6f3b7c7)
+![Landing page](https://github.com/AleksandarSarbajic/creckflix/assets/114814838/6ff2d2a0-dfed-47c3-93d3-baf2e3df3ac6)
+
+![App page](https://github.com/AleksandarSarbajic/creckflix/assets/114814838/a41fb913-3acc-43be-b0dc-60c0101b041d)
+
 
 ## Quicstart
 
@@ -60,6 +69,27 @@ $ npm run start
 
 ## How It Works
 
+### Landing page
+
+The landing page is just static html and CSS page with a login button to move you to a login page
+
+![Landing page](https://github.com/AleksandarSarbajic/creckflix/assets/114814838/6ff2d2a0-dfed-47c3-93d3-baf2e3df3ac6)
+
+### Login page
+
+On login page page you enter your email and password to login. If u don't have an account, you can create a new one.
+
+![login page](https://github.com/AleksandarSarbajic/creckflix/assets/114814838/12468dad-e424-4127-92dc-6b200d074634)
+
+### Sing up page
+
+If you are new to Creckflix you can create a new account, but email can't be already in use for another account. You can choose some of the avatars for the profile picture, but when u login you can choose even more avatars
+
+![sign up page](https://github.com/AleksandarSarbajic/creckflix/assets/114814838/3e516b50-3791-4fb7-9ecf-7c367bd97dae)
+
+After successful login, now you can browse for different movies, add them to your list search for specific movie and the most important watch a movie.
+
+![App page](https://github.com/AleksandarSarbajic/creckflix/assets/114814838/a41fb913-3acc-43be-b0dc-60c0101b041d)
 
 
 ## You may also like...
