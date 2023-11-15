@@ -14,7 +14,7 @@
 
 <p align="center">Creckflix is an app where you can watch movies anywhere for free</p>
 
-<p align="center">*DISCLAMER* watching movie is disabled because of copyright </p>
+
 
 
 
